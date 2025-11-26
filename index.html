@@ -261,6 +261,22 @@
         margin-bottom: 0.5rem;
       }
 
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 1.5rem;
+      }
+
+      .chip {
+        border-radius: 999px;
+        padding: 0.35rem 0.9rem;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
       .program-list {
         list-style: none;
         padding: 0;
@@ -270,6 +286,31 @@
 
       .program-list li + li {
         margin-top: 0.4rem;
+      }
+
+      .schedule-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .schedule-card {
+        background: var(--card);
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        padding: 1.6rem;
+      }
+
+      .schedule-card strong {
+        display: block;
+        font-size: 1.25rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .schedule-card span {
+        display: block;
+        color: var(--muted);
+        margin-bottom: 0.6rem;
       }
 
       .directors {
@@ -380,6 +421,7 @@
         <div class="nav-links">
           <a href="#programas">Programas</a>
           <a href="#directores">Directores</a>
+          <a href="#agenda">Agenda</a>
           <a href="#metodo">Método</a>
           <a href="#contacto">Inscripción</a>
         </div>
@@ -391,23 +433,23 @@
           <div class="wrapper hero-grid">
             <div>
               <p class="eyebrow">Academia de excelencia</p>
-              <h1>Danza de elite con el sello bicampeón nacional.</h1>
+              <h1>Elegancia escénica guiada por Laura Gaetan y Fabián López.</h1>
               <p class="lead">
-                Timbaleros forma intérpretes versátiles con técnica impecable y presencia escénica. Nuestra escuela combina coaching de alto rendimiento, repertorio internacional y la elegancia de un estudio boutique en cada detalle.
+                Con 22 años de experiencia, los directores de Timbaleros desarrollaron un método que hace que aprender a bailar sea simple, ameno y preciso. Sumá coaching, repertorio internacional y la calidez de una comunidad que se reúne en cada gala y viaje.
               </p>
-              <a class="btn" href="#programas">Explorar programas</a>
+              <a class="btn" href="#agenda">Ver agenda 2025</a>
               <div class="hero-stats">
                 <div class="stat">
-                  <strong>15+</strong>
-                  años formando artistas en América Latina y Europa.
+                  <strong>22</strong>
+                  años formando artistas con metodología propia.
                 </div>
                 <div class="stat">
                   <strong>2×</strong>
-                  Campeones nacionales de salsa dirigendo la academia.
+                  Bicampeones nacionales de salsa liderando cada cohorte.
                 </div>
                 <div class="stat">
-                  <strong>12</strong>
-                  disciplinas activas entre ritmos urbanos, latinos y contemporáneos.
+                  <strong>5K+</strong>
+                  bailarines y familias conectados vía @timbaleros.
                 </div>
               </div>
             </div>
@@ -468,7 +510,7 @@
                   <li>Mambo intermedio</li>
                   <li>Salsa y bachata 1 · 2 · 3</li>
                   <li>Estilo femenino mambo coreográfico</li>
-                  <li>Couching escénico</li>
+                  <li>Coucheo escénico</li>
                 </ul>
               </article>
               <article class="program-card">
@@ -484,14 +526,53 @@
           </div>
         </section>
 
+        <section id="agenda">
+          <div class="wrapper">
+            <p class="eyebrow">Clases 2025</p>
+            <h2>Inicio de ciclo: 5 de marzo · cupos limitados.</h2>
+            <p class="section-subtitle">
+              Agenda tu entrevista para asegurar lugar en los grupos que comienzan en marzo. Las clases presenciales combinan técnica, musicalidad y performance en grupos reducidos, con seguimiento directo de Laura y Fabián.
+            </p>
+            <div class="schedule-grid">
+              <article class="schedule-card">
+                <strong>Estilo Mambo</strong>
+                <span>Miércoles · 22 hs</span>
+                Primer módulo enfocado en elegancia de línea y coordinación pareja. Ideal para sumar al plan competitivo 2025.
+              </article>
+              <article class="schedule-card">
+                <strong>Salsa & Bachata</strong>
+                <span>Lunes y viernes · 20 hs</span>
+                Tres niveles (1·2·3) para progresar desde fundamentos hasta shows coreográficos listos para galas.
+              </article>
+              <article class="schedule-card">
+                <strong>Iniciación Danza</strong>
+                <span>Martes · 19 hs</span>
+                Grupo pensado para niñxs y familias que dan sus primeros pasos en Timbaleros con metodología lúdica y elegante.
+              </article>
+              <article class="schedule-card">
+                <strong>K-pop Showcase</strong>
+                <span>Martes y jueves · 19 hs</span>
+                Entrenamiento de escena con covers y creación original inspirado en los clips que compartimos a diario en Instagram.
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section id="directores">
           <div class="wrapper directors">
             <div>
               <p class="eyebrow">Dirección artística</p>
               <h2>Fundadores bicampeones nacionales de salsa.</h2>
               <p>
-                Valentina Cárdenas y Mateo Rivas lideran Timbaleros. Además de ser bicampeones de salsa estilo cabaret, han coreografiado shows para festivales internacionales y acompañan personalmente cada cohorte.
+                Laura Gaetan y Fabián López dirigen la academia y acompañan personalmente cada entrenamiento, show y viaje. Su método sintetiza coaching técnico, musicalidad y disfrute para que aprender sea tan elegante como cada presentación.
               </p>
+              <div class="chips">
+                <span class="chip">Clases 2025</span>
+                <span class="chip">Profes LT</span>
+                <span class="chip">Directores Laura &amp; Fabián</span>
+                <span class="chip">Alumnos</span>
+                <span class="chip">Giras &amp; Galas</span>
+              </div>
               <div class="values">
                 <article class="value-card">
                   <strong>Metodología Signature</strong>
@@ -503,7 +584,7 @@
                 </article>
               </div>
             </div>
-            <img src="https://images.unsplash.com/photo-1496309732348-3627f3f040ee?auto=format&fit=crop&w=900&q=80" alt="Directores Timbaleros" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1496309732348-3627f3f040ee?auto=format&fit=crop&w=900&q=80" alt="Laura Gaetan y Fabián López" loading="lazy" />
           </div>
         </section>
 
@@ -562,12 +643,12 @@
         <section id="contacto">
           <div class="wrapper">
             <div class="cta">
-              <p class="eyebrow">Inscripciones 2024</p>
-              <h2>Agenda una entrevista con el equipo de dirección.</h2>
+              <p class="eyebrow">Inscripciones 2025</p>
+              <h2>Agenda una entrevista con Laura y Fabián.</h2>
               <p>
-                Comparte tu trayectoria, objetivos y disponibilidad. Prepararemos un plan de entrenamiento para que ingreses al grupo ideal en Timbaleros.
+                Contanos tu experiencia, objetivos y horarios disponibles. Respondemos por WhatsApp para asignarte al grupo ideal antes del arranque del 5 de marzo.
               </p>
-              <a class="btn" href="mailto:admisiones@timbaleros.dance">Reservar entrevista</a>
+              <a class="btn" href="https://bit.ly/Timbaleroswsp" target="_blank" rel="noreferrer">Hablar por WhatsApp</a>
             </div>
           </div>
         </section>
@@ -576,7 +657,7 @@
       <footer>
         <div class="wrapper">
           <div>© <span id="year"></span> Timbaleros Academia de Danza.</div>
-          <div>Estudios en CDMX · Bogotá · Madrid</div>
+          <div>Estudios en CDMX · Bogotá · Madrid · Instagram @timbaleros</div>
         </div>
       </footer>
     </div>
