@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timbaleros • Landing Comercial</title>
+    <title>Timbaleros Academia de Danza</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,13 +12,14 @@
     />
     <style>
       :root {
-        --bg: #050914;
-        --bg-alt: #0f1625;
-        --primary: #ffe15d;
-        --accent: #37f2ff;
-        --text: #f3f6ff;
-        --muted: #99a3c2;
-        --card: rgba(15, 22, 37, 0.8);
+        --bg: #03050b;
+        --bg-alt: #0a0f1d;
+        --primary: #f1c27d;
+        --accent: #c8a2ff;
+        --accent-2: #8ed1ff;
+        --text: #f8f8fb;
+        --muted: #a7b0cc;
+        --card: rgba(10, 15, 29, 0.85);
         --border: rgba(255, 255, 255, 0.08);
       }
 
@@ -28,40 +29,40 @@
 
       body {
         margin: 0;
-        font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
         color: var(--text);
         background: var(--bg);
         line-height: 1.6;
-        min-height: 100vh;
       }
 
       .page {
+        min-height: 100vh;
         position: relative;
-        overflow: hidden;
-        background: radial-gradient(circle at 20% 0%, rgba(55, 242, 255, 0.25), transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(255, 225, 93, 0.22), transparent 45%),
-          linear-gradient(140deg, #030509, #070c16 60%, #0e1728);
+        overflow-x: hidden;
+        background: radial-gradient(circle at 80% 10%, rgba(200, 162, 255, 0.18), transparent 45%),
+          radial-gradient(circle at 15% 20%, rgba(142, 209, 255, 0.2), transparent 40%),
+          linear-gradient(135deg, #03050b, #070c18 60%, #0f1526);
       }
 
       main {
         position: relative;
-        z-index: 2;
+        z-index: 1;
       }
 
       nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1.5rem 0;
         position: sticky;
         top: 0;
-        z-index: 10;
-        transition: background 0.3s ease, backdrop-filter 0.3s ease;
+        z-index: 20;
+        backdrop-filter: blur(16px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.3rem 0;
+        transition: background 0.3s ease;
       }
 
       nav.scrolled {
-        background: rgba(5, 9, 20, 0.85);
-        backdrop-filter: blur(16px);
+        background: rgba(3, 5, 11, 0.75);
         border-bottom: 1px solid var(--border);
       }
 
@@ -73,35 +74,35 @@
       .brand {
         font-size: 1.3rem;
         font-weight: 600;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.12em;
         display: flex;
         align-items: center;
-        gap: 0.4rem;
+        gap: 0.6rem;
       }
 
       .brand span {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
         display: inline-flex;
-        width: 36px;
-        height: 36px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, var(--accent), var(--primary));
         align-items: center;
         justify-content: center;
-        color: #050914;
-        font-weight: 700;
+        font-family: 'Playfair Display', 'Times New Roman', serif;
+        font-size: 1.1rem;
+        color: #1a0f00;
       }
 
       .nav-links {
         display: flex;
-        align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
         font-size: 0.95rem;
       }
 
       .nav-links a {
         color: var(--text);
         text-decoration: none;
-        opacity: 0.75;
+        opacity: 0.8;
         transition: opacity 0.2s ease;
       }
 
@@ -113,17 +114,16 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
         border-radius: 999px;
         border: none;
-        padding: 0.95rem 1.8rem;
+        padding: 0.9rem 1.9rem;
         font-weight: 600;
         cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
         text-decoration: none;
-        color: #050914;
-        background: linear-gradient(120deg, var(--primary), var(--accent));
-        box-shadow: 0 10px 30px rgba(55, 242, 255, 0.25);
+        background: linear-gradient(130deg, var(--primary), var(--accent));
+        color: #1a1207;
+        box-shadow: 0 15px 40px rgba(200, 162, 255, 0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
       .btn:hover {
@@ -131,7 +131,7 @@
       }
 
       header.hero {
-        padding: 4rem 0 5rem;
+        padding: 4.5rem 0;
       }
 
       .hero-grid {
@@ -143,25 +143,25 @@
 
       .eyebrow {
         font-size: 0.85rem;
-        letter-spacing: 0.3em;
+        letter-spacing: 0.35em;
         text-transform: uppercase;
-        color: var(--accent);
+        color: var(--accent-2);
       }
 
       h1 {
-        font-family: 'Playfair Display', 'Times New Roman', serif;
-        font-size: clamp(2.8rem, 5vw, 4.5rem);
-        margin: 0.6rem 0 1rem;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3rem, 5vw, 4.6rem);
+        margin: 0.5rem 0 1rem;
         line-height: 1.1;
       }
 
       h2 {
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: clamp(2rem, 4vw, 3.2rem);
         margin-bottom: 1rem;
       }
 
       p.lead {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         color: var(--muted);
         margin-bottom: 2rem;
       }
@@ -169,19 +169,18 @@
       .hero-stats {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1.5rem;
-        margin-top: 2rem;
+        gap: 1rem;
       }
 
       .stat {
         background: var(--card);
+        border-radius: 20px;
         border: 1px solid var(--border);
-        border-radius: 18px;
-        padding: 1.5rem;
+        padding: 1.3rem;
       }
 
       .stat strong {
-        font-size: 2rem;
+        font-size: 1.9rem;
         display: block;
       }
 
@@ -189,57 +188,49 @@
         position: relative;
         padding: 3rem;
         background: rgba(255, 255, 255, 0.02);
+        border-radius: 28px;
         border: 1px solid var(--border);
-        border-radius: 26px;
-        min-height: 360px;
         overflow: hidden;
+        min-height: 360px;
       }
 
       .visual::before,
       .visual::after {
         content: '';
         position: absolute;
-        border-radius: 50%;
-        filter: blur(60px);
+        border-radius: 999px;
+        filter: blur(80px);
       }
 
       .visual::before {
+        background: rgba(241, 194, 125, 0.4);
         width: 320px;
         height: 320px;
-        background: rgba(55, 242, 255, 0.4);
         top: -80px;
         right: -40px;
       }
 
       .visual::after {
+        background: rgba(200, 162, 255, 0.35);
         width: 280px;
         height: 280px;
-        background: rgba(255, 225, 93, 0.35);
-        bottom: -60px;
-        left: -40px;
+        bottom: -70px;
+        left: -60px;
       }
 
       .visual-content {
         position: relative;
         z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
       }
 
       .visual-card {
-        background: rgba(5, 9, 20, 0.7);
-        border-radius: 20px;
+        background: rgba(3, 5, 11, 0.75);
         border: 1px solid var(--border);
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .visual-card h3 {
-        margin-top: 0;
-        margin-bottom: 0.6rem;
-      }
-
-      .visual-card p {
-        margin: 0;
-        color: var(--muted);
+        border-radius: 20px;
+        padding: 1.4rem;
       }
 
       section {
@@ -248,53 +239,83 @@
 
       .section-subtitle {
         color: var(--muted);
-        margin-bottom: 2rem;
         max-width: 640px;
+        margin-bottom: 2rem;
       }
 
-      .card-grid {
+      .program-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 1.5rem;
       }
 
-      .card {
+      .program-card {
         background: var(--card);
+        border-radius: 22px;
         border: 1px solid var(--border);
-        border-radius: 20px;
-        padding: 1.8rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
+        padding: 1.6rem;
       }
 
-      .card-icon {
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.06);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
+      .program-card h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
       }
 
-      .highlight {
+      .program-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .program-list li + li {
+        margin-top: 0.4rem;
+      }
+
+      .directors {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 2rem;
-        align-items: center;
-        background: linear-gradient(120deg, rgba(55, 242, 255, 0.15), rgba(255, 225, 93, 0.1));
+        background: linear-gradient(115deg, rgba(241, 194, 125, 0.2), rgba(200, 162, 255, 0.15));
         border-radius: 28px;
         padding: 3rem;
         border: 1px solid var(--border);
       }
 
-      .highlight img {
+      .directors img {
         width: 100%;
-        border-radius: 22px;
+        border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 25px 45px rgba(3, 5, 11, 0.45);
+      }
+
+      .values {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .value-card {
+        background: var(--card);
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        padding: 1.7rem;
+      }
+
+      .value-card strong {
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .timeline-step {
+        border-left: 2px solid var(--accent);
+        padding-left: 1.5rem;
       }
 
       .testimonials {
@@ -310,51 +331,17 @@
         padding: 1.8rem;
       }
 
-      .testimonial p {
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-
       .testimonial strong {
         display: block;
-        margin-top: 1.5rem;
-      }
-
-      .pricing {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 1.5rem;
-      }
-
-      .price-card {
-        background: rgba(5, 9, 20, 0.65);
-        border: 1px solid var(--border);
-        border-radius: 24px;
-        padding: 2rem;
-      }
-
-      .price-card.popular {
-        border: 1px solid rgba(255, 225, 93, 0.6);
-        box-shadow: 0 25px 45px rgba(255, 225, 93, 0.12);
-      }
-
-      .price-card ul {
-        list-style: none;
-        padding: 0;
-        margin: 1.2rem 0 2rem;
-        color: var(--muted);
-      }
-
-      .price-card li + li {
-        margin-top: 0.8rem;
+        margin-top: 1.2rem;
       }
 
       .cta {
         text-align: center;
-        background: linear-gradient(120deg, rgba(55, 242, 255, 0.25), rgba(255, 225, 93, 0.25));
         border-radius: 32px;
         padding: 4rem 2rem;
         border: 1px solid var(--border);
+        background: linear-gradient(125deg, rgba(241, 194, 125, 0.25), rgba(200, 162, 255, 0.2));
       }
 
       footer {
@@ -367,7 +354,7 @@
       footer .wrapper {
         display: flex;
         flex-wrap: wrap;
-        gap: 1.5rem;
+        gap: 1rem;
         justify-content: space-between;
       }
 
@@ -382,7 +369,6 @@
         }
         .btn {
           width: 100%;
-          justify-content: center;
         }
       }
     </style>
@@ -392,171 +378,182 @@
       <nav id="top-nav" class="wrapper">
         <div class="brand"><span>T</span>Timbaleros</div>
         <div class="nav-links">
-          <a href="#beneficios">Beneficios</a>
-          <a href="#solucion">Solución</a>
-          <a href="#testimonios">Testimonios</a>
-          <a href="#planes">Planes</a>
+          <a href="#programas">Programas</a>
+          <a href="#directores">Directores</a>
+          <a href="#metodo">Método</a>
+          <a href="#contacto">Inscripción</a>
         </div>
-        <a class="btn" href="#contacto">Agendar demo</a>
+        <a class="btn" href="#contacto">Agenda tu entrevista</a>
       </nav>
 
       <main>
         <header class="hero">
           <div class="wrapper hero-grid">
             <div>
-              <p class="eyebrow">EDICIONES LIMITADAS</p>
-              <h1>Tu próxima colección merece un lanzamiento impecable.</h1>
+              <p class="eyebrow">Academia de excelencia</p>
+              <h1>Danza de elite con el sello bicampeón nacional.</h1>
               <p class="lead">
-                Presentamos la landing definitiva para creadores y marcas independientes. Inspirada en experiencias premium, con un storytelling que convierte visitantes en clientes.
+                Timbaleros forma intérpretes versátiles con técnica impecable y presencia escénica. Nuestra escuela combina coaching de alto rendimiento, repertorio internacional y la elegancia de un estudio boutique en cada detalle.
               </p>
-              <div class="hero-cta">
-                <a class="btn" href="#planes">Construir mi lanzamiento</a>
-              </div>
+              <a class="btn" href="#programas">Explorar programas</a>
               <div class="hero-stats">
                 <div class="stat">
-                  <strong>92%</strong>
-                  de incremento en leads durante las primeras 72h.
+                  <strong>15+</strong>
+                  años formando artistas en América Latina y Europa.
                 </div>
                 <div class="stat">
-                  <strong>3x</strong>
-                  mayor retención gracias a microinteracciones.
+                  <strong>2×</strong>
+                  Campeones nacionales de salsa dirigendo la academia.
                 </div>
                 <div class="stat">
-                  <strong>48h</strong>
-                  para personalizar y salir al aire.
+                  <strong>12</strong>
+                  disciplinas activas entre ritmos urbanos, latinos y contemporáneos.
                 </div>
               </div>
             </div>
             <div class="visual">
               <div class="visual-content">
-                <div class="visual-card">
-                  <h3>Panel en vivo</h3>
-                  <p>Controla inventario, métricas y campañas en un tablero elegante.</p>
-                </div>
-                <div class="visual-card">
-                  <h3>Checkout asistido</h3>
-                  <p>Reduce fricciones con pagos optimizados y experiencia móvil.</p>
-                </div>
-                <div class="visual-card">
-                  <h3>Integraciones nativas</h3>
-                  <p>Shopify, Stripe y analítica conectadas desde el inicio.</p>
-                </div>
+                <article class="visual-card">
+                  <h3>Estudios premium</h3>
+                  <p>
+                    Pisos flotantes, iluminación escénica y tecnología audiovisual para evaluar ejecución cuadro a cuadro.
+                  </p>
+                </article>
+                <article class="visual-card">
+                  <h3>Mentoría personalizada</h3>
+                  <p>
+                    Planes de coaching con seguimiento técnico, musicalidad y presencia para escenarios profesionales.
+                  </p>
+                </article>
+                <article class="visual-card">
+                  <h3>Red global</h3>
+                  <p>
+                    Acceso a residencias, competencias y coreógrafos invitados de K-pop, jazz y ritmos afrolatinos.
+                  </p>
+                </article>
               </div>
             </div>
           </div>
         </header>
 
-        <section id="beneficios">
+        <section id="programas">
           <div class="wrapper">
-            <p class="eyebrow">Beneficios clave</p>
-            <h2>Una landing pensada para lanzar, emocionar y convertir.</h2>
+            <p class="eyebrow">Programas</p>
+            <h2>Una línea académica para cada estilo y nivel.</h2>
             <p class="section-subtitle">
-              Desde la primera impresión hasta el momento de compra, cada bloque está diseñado para resaltar la historia de tu producto y guiar al visitante de forma natural hasta la conversión.
+              Diseñamos módulos por edad, velocidad de aprendizaje y foco artístico. Todos los grupos trabajan técnica, interpretación, puesta en escena y acceso a escenarios reales durante el año lectivo.
             </p>
-            <div class="card-grid">
-              <article class="card">
-                <div class="card-icon">⚡</div>
-                <h3>Bloques dinámicos</h3>
-                <p>Biblioteca de secciones hero, features y storytelling que puedes combinar sin tocar código.</p>
+            <div class="program-grid">
+              <article class="program-card">
+                <h3>Primeros pasos</h3>
+                <ul class="program-list">
+                  <li>Iniciación a la danza</li>
+                  <li>Latino Kids</li>
+                  <li>K-pop junior</li>
+                  <li>Clásico básico</li>
+                </ul>
               </article>
-              <article class="card">
-                <div class="card-icon">🎨</div>
-                <h3>Identidad cuidada</h3>
-                <p>Componentes con tipografías editoriales, degradados contemporáneos y uso delicado del espacio.</p>
+              <article class="program-card">
+                <h3>Juvenil</h3>
+                <ul class="program-list">
+                  <li>Latino Juvenil</li>
+                  <li>Jazz-contemporáneo</li>
+                  <li>Mambo inicial</li>
+                  <li>Estilo femenino bachata coreográfico</li>
+                </ul>
               </article>
-              <article class="card">
-                <div class="card-icon">📈</div>
-                <h3>Optimizada</h3>
-                <p>Pruebas A/B y métricas listas para conectarse a tus dashboards de preferencia.</p>
+              <article class="program-card">
+                <h3>Profesional</h3>
+                <ul class="program-list">
+                  <li>Mambo intermedio</li>
+                  <li>Salsa y bachata 1 · 2 · 3</li>
+                  <li>Estilo femenino mambo coreográfico</li>
+                  <li>Couching escénico</li>
+                </ul>
               </article>
-              <article class="card">
-                <div class="card-icon">🤝</div>
-                <h3>Experiencia guiada</h3>
-                <p>CTA distribuidos en todo el flujo para acompañar al usuario mientras descubre tu propuesta.</p>
+              <article class="program-card">
+                <h3>Especializaciones</h3>
+                <ul class="program-list">
+                  <li>Entrenamiento K-pop de escena</li>
+                  <li>Coaching competitivo</li>
+                  <li>Residencias con coreógrafos invitados</li>
+                  <li>Laboratorio clásico-contemporáneo</li>
+                </ul>
               </article>
             </div>
           </div>
         </section>
 
-        <section id="solucion">
-          <div class="wrapper highlight">
+        <section id="directores">
+          <div class="wrapper directors">
             <div>
-              <p class="eyebrow">Suite Creativa</p>
-              <h2>Haz que tu colección hable por sí misma.</h2>
+              <p class="eyebrow">Dirección artística</p>
+              <h2>Fundadores bicampeones nacionales de salsa.</h2>
               <p>
-                Timbaleros combina artes visuales, copywriting emocional y data para construir una landing que vibra como tu marca. Perfecta para campañas con alto impacto visual, drops limitados o lanzamientos corporativos.
+                Valentina Cárdenas y Mateo Rivas lideran Timbaleros. Además de ser bicampeones de salsa estilo cabaret, han coreografiado shows para festivales internacionales y acompañan personalmente cada cohorte.
               </p>
-              <ul>
-                <li>Capas de storytelling para producto, equipo y proceso creativo.</li>
-                <li>Contadores dinámicos y venta anticipada en un click.</li>
-                <li>Contenido adaptable a desktop, tablet y mobile sin perder elegancia.</li>
-              </ul>
+              <div class="values">
+                <article class="value-card">
+                  <strong>Metodología Signature</strong>
+                  <p>Diagnóstico corporal, entrenamiento funcional y coaching mental para sostener performance.</p>
+                </article>
+                <article class="value-card">
+                  <strong>Laboratorio coreográfico</strong>
+                  <p>Creación de piezas originales cada trimestre con énfasis en narrativa escénica.</p>
+                </article>
+              </div>
             </div>
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Diseño digital" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1496309732348-3627f3f040ee?auto=format&fit=crop&w=900&q=80" alt="Directores Timbaleros" loading="lazy" />
+          </div>
+        </section>
+
+        <section id="metodo">
+          <div class="wrapper">
+            <p class="eyebrow">Método Timbaleros</p>
+            <h2>Elegancia, precisión y presencia escénica.</h2>
+            <div class="timeline">
+              <article class="timeline-step">
+                <h3>Evaluación 360°</h3>
+                <p>Medimos técnica, musicalidad y condición física para definir plan personalizado.</p>
+              </article>
+              <article class="timeline-step">
+                <h3>Coaching por niveles</h3>
+                <p>Clases reducidas, feedback semanal y seguimiento audiovisual.</p>
+              </article>
+              <article class="timeline-step">
+                <h3>Mentores invitados</h3>
+                <p>Workshops con especialistas en K-pop, jazz contemporáneo y ritmos latinos de competencia.</p>
+              </article>
+              <article class="timeline-step">
+                <h3>Escenario real</h3>
+                <p>Showcases trimestrales y acceso a competencias oficiales nacionales e internacionales.</p>
+              </article>
+            </div>
           </div>
         </section>
 
         <section id="testimonios">
           <div class="wrapper">
             <p class="eyebrow">Testimonios</p>
-            <h2>Marcas que confían en la experiencia Timbaleros.</h2>
+            <h2>Alumnos que brillan dentro y fuera del estudio.</h2>
             <div class="testimonials">
               <article class="testimonial">
                 <p>
-                  “Duplicamos nuestra preventa porque la narrativa captura exactamente lo que somos. El feedback de clientes fue inmediato.”
+                  “El acompañamiento técnico y emocional es impecable. Pasé de nivel intermedio a representar a mi ciudad en menos de un año.”
                 </p>
-                <strong>Celia Varela · Casa Norte</strong>
+                <strong>Alejandra · Programa Mambo</strong>
               </article>
               <article class="testimonial">
                 <p>
-                  “En 48 horas teníamos una landing lista para el drop. Detalles como la animación de CTA hacen toda la diferencia.”
+                  “El laboratorio de K-pop me abrió puertas para audicionar en Seúl. La preparación escénica es detallista y elegante.”
                 </p>
-                <strong>Raúl Suárez · Lumen Studio</strong>
+                <strong>Jun · Residencia K-pop</strong>
               </article>
               <article class="testimonial">
                 <p>
-                  “Los bloques modulares permiten que marketing itere sin depender del equipo de desarrollo cada semana.”
+                  “Latino Kids combina juego y técnica. Mi hija ganó confianza y disciplina desde la primera semana.”
                 </p>
-                <strong>Daniela Ortiz · Prisma Labs</strong>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="planes">
-          <div class="wrapper">
-            <p class="eyebrow">Planes</p>
-            <h2>Selecciona el ritmo ideal para tu lanzamiento.</h2>
-            <div class="pricing">
-              <article class="price-card">
-                <h3>Esencia</h3>
-                <p class="lead">USD 1,250</p>
-                <ul>
-                  <li>Hero + 4 bloques personalizables</li>
-                  <li>Copywriting asistido</li>
-                  <li>Entrega en 5 días</li>
-                </ul>
-                <a class="btn" href="#contacto">Reservar</a>
-              </article>
-              <article class="price-card popular">
-                <h3>Momentum</h3>
-                <p class="lead">USD 2,400</p>
-                <ul>
-                  <li>Todo Esencia</li>
-                  <li>Sistema de testimonios & stories</li>
-                  <li>Integración de formularios y automatizaciones</li>
-                </ul>
-                <a class="btn" href="#contacto">Quiero Momentum</a>
-              </article>
-              <article class="price-card">
-                <h3>Signature</h3>
-                <p class="lead">Desde USD 4,800</p>
-                <ul>
-                  <li>Investigación creativa completa</li>
-                  <li>Microinteracciones a medida</li>
-                  <li>Lanzamiento guiado y optimización post-release</li>
-                </ul>
-                <a class="btn" href="#contacto">Aplicar</a>
+                <strong>Patricia · Madre de alumna</strong>
               </article>
             </div>
           </div>
@@ -565,12 +562,12 @@
         <section id="contacto">
           <div class="wrapper">
             <div class="cta">
-              <p class="eyebrow">Hazlo tuyo</p>
-              <h2>Agenda 30 minutos para revisar tu próximo lanzamiento.</h2>
+              <p class="eyebrow">Inscripciones 2024</p>
+              <h2>Agenda una entrevista con el equipo de dirección.</h2>
               <p>
-                Puedes traer referencias, moodboards o métricas. Construiremos juntos una hoja de ruta visual para que tu landing salga impecable.
+                Comparte tu trayectoria, objetivos y disponibilidad. Prepararemos un plan de entrenamiento para que ingreses al grupo ideal en Timbaleros.
               </p>
-              <a class="btn" href="mailto:hola@timbaleros.studio">Reservar con el equipo</a>
+              <a class="btn" href="mailto:admisiones@timbaleros.dance">Reservar entrevista</a>
             </div>
           </div>
         </section>
@@ -578,8 +575,8 @@
 
       <footer>
         <div class="wrapper">
-          <div>© <span id="year"></span> Timbaleros Studio. Todos los derechos reservados.</div>
-          <div>Hecho en CDMX · Bogotá · Madrid</div>
+          <div>© <span id="year"></span> Timbaleros Academia de Danza.</div>
+          <div>Estudios en CDMX · Bogotá · Madrid</div>
         </div>
       </footer>
     </div>
@@ -588,15 +585,10 @@
       const nav = document.getElementById('top-nav');
       const year = document.getElementById('year');
       if (year) year.textContent = new Date().getFullYear();
-
       const toggleNav = () => {
-        if (window.scrollY > 40) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
+        if (window.scrollY > 40) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
       };
-
       document.addEventListener('scroll', toggleNav);
       toggleNav();
     </script>
