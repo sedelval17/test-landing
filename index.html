@@ -1,492 +1,518 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timbaleros · Academia de Danza Latina en Córdoba</title>
-    <meta name="description" content="Timbaleros es una academia de danza en Córdoba especializada en salsa, bachata y ritmos latinos para adultos jóvenes. Reservá tu clase de prueba o escribinos por WhatsApp." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg: #070c1a;
-        --bg-soft: #11182c;
-        --card: rgba(17, 24, 44, 0.9);
-        --primary: #ff6f61;
-        --secondary: #00d7c0;
-        --accent: #ffd76f;
-        --text: #f5f7ff;
-        --muted: #b0b7d4;
-      }
 
-      * {
-        box-sizing: border-box;
-      }
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFY7J42TX8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      body {
-        margin: 0;
-        font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-        scroll-behavior: smooth;
-      }
+    gtag('config', 'G-TFY7J42TX8');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timbaleros · Academia de Danza Latina en Córdoba</title>
+  <meta name="description"
+    content="Timbaleros es una academia de danza en Córdoba especializada en salsa, bachata y ritmos latinos para adultos jóvenes. Reservá tu clase de prueba o escribinos por WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070c1a;
+      --bg-soft: #11182c;
+      --card: rgba(17, 24, 44, 0.9);
+      --primary: #ff6f61;
+      --secondary: #00d7c0;
+      --accent: #ffd76f;
+      --text: #f5f7ff;
+      --muted: #b0b7d4;
+    }
 
-      img {
-        max-width: 100%;
-        display: block;
-      }
+    * {
+      box-sizing: border-box;
+    }
 
-      a {
-        color: inherit;
-      }
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
 
-      .wrapper {
-        width: min(1100px, 90%);
-        margin: 0 auto;
-      }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-      header.hero {
-        background: radial-gradient(circle at 20% 20%, rgba(255, 111, 97, 0.35), transparent 45%),
-          radial-gradient(circle at 80% 0%, rgba(0, 215, 192, 0.25), transparent 40%),
-          var(--bg);
-        padding-bottom: 4rem;
-      }
+    a {
+      color: inherit;
+    }
 
-      .top-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem 0;
-      }
+    .wrapper {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
 
-      .logo {
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
+    header.hero {
+      background: radial-gradient(circle at 20% 20%, rgba(255, 111, 97, 0.35), transparent 45%),
+        radial-gradient(circle at 80% 0%, rgba(0, 215, 192, 0.25), transparent 40%),
+        var(--bg);
+      padding-bottom: 4rem;
+    }
 
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      padding: 3rem 0 0;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 1rem;
+    }
+
+    p.lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.8rem;
+      border-radius: 999px;
+      border: none;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(130deg, var(--primary), #ff9261);
+      color: #1b0c0c;
+      box-shadow: 0 12px 30px rgba(255, 111, 97, 0.3);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(245, 247, 255, 0.4);
+      color: var(--text);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-card {
+      background: rgba(6, 10, 21, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1.8rem;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    section:nth-of-type(even) {
+      background: var(--bg-soft);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid.cards-3 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 1.6rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .benefits-list,
+    .faq-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .benefit-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+    }
+
+    .benefit-item span {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    details {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 1rem 1.2rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      margin: 0.6rem 0 0;
+      color: var(--muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.85rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(0, 0, 0, 0.2);
+      color: var(--text);
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 140px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 720px) {
       .nav-links {
-        display: flex;
-        gap: 1.5rem;
-        font-size: 0.95rem;
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        color: var(--muted);
-        transition: color 0.2s ease;
-      }
-
-      .nav-links a:hover {
-        color: var(--text);
-      }
-
-      .hero-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2.5rem;
-        padding: 3rem 0 0;
-        align-items: center;
-      }
-
-      h1 {
-        font-size: clamp(2.5rem, 5vw, 4.2rem);
-        line-height: 1.1;
-        margin: 0 0 1rem;
-      }
-
-      h2 {
-        font-size: clamp(1.8rem, 4vw, 2.8rem);
-        margin-bottom: 1rem;
-      }
-
-      p.lead {
-        font-size: 1.15rem;
-        color: var(--muted);
-        margin-bottom: 2rem;
-      }
-
-      .cta-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.95rem 1.8rem;
-        border-radius: 999px;
-        border: none;
-        font-weight: 600;
-        text-decoration: none;
-        cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .btn-primary {
-        background: linear-gradient(130deg, var(--primary), #ff9261);
-        color: #1b0c0c;
-        box-shadow: 0 12px 30px rgba(255, 111, 97, 0.3);
-      }
-
-      .btn-outline {
-        border: 1px solid rgba(245, 247, 255, 0.4);
-        color: var(--text);
-      }
-
-      .btn:hover {
-        transform: translateY(-3px);
-      }
-
-      .hero-card {
-        background: rgba(6, 10, 21, 0.65);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 1.8rem;
-        border-radius: 24px;
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
-      }
-
-      section {
-        padding: 4rem 0;
-      }
-
-      section:nth-of-type(even) {
-        background: var(--bg-soft);
-      }
-
-      .grid {
-        display: grid;
-        gap: 1.5rem;
-      }
-
-      .grid.cards-3 {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      }
-
-      .card {
-        background: var(--card);
-        border-radius: 18px;
-        padding: 1.6rem;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-      }
-
-      .benefits-list,
-      .faq-list {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .benefit-item {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 14px;
-        padding: 1rem 1.2rem;
-        display: flex;
-        gap: 0.8rem;
-        align-items: flex-start;
-      }
-
-      .benefit-item span {
-        color: var(--accent);
-        font-weight: 700;
-      }
-
-      details {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 14px;
-        padding: 1rem 1.2rem;
-      }
-
-      summary {
-        cursor: pointer;
-        font-weight: 600;
-      }
-
-      summary::-webkit-details-marker {
         display: none;
       }
 
-      details p {
-        margin: 0.6rem 0 0;
-        color: var(--muted);
+      .cta-group {
+        flex-direction: column;
       }
 
-      .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        align-items: flex-start;
+      .hero-card {
+        order: -1;
       }
+    }
+  </style>
+</head>
 
-      form {
-        display: grid;
-        gap: 1rem;
-      }
-
-      input,
-      textarea {
-        width: 100%;
-        padding: 0.85rem;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        background: rgba(0, 0, 0, 0.2);
-        color: var(--text);
-        font-family: inherit;
-      }
-
-      textarea {
-        min-height: 140px;
-      }
-
-      .social-links {
-        display: flex;
-        gap: 1rem;
-      }
-
-      .social-links a {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: var(--text);
-        font-weight: 600;
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem 0 3rem;
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      @media (max-width: 720px) {
-        .nav-links {
-          display: none;
-        }
-        .cta-group {
-          flex-direction: column;
-        }
-        .hero-card {
-          order: -1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="hero" id="inicio">
-      <div class="wrapper">
-        <div class="top-nav">
-          <div class="logo">Timbaleros</div>
-          <nav class="nav-links">
-            <a href="#sobre">Sobre</a>
-            <a href="#clases">Clases</a>
-            <a href="#beneficios">Beneficios</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contacto">Contacto</a>
-          </nav>
-        </div>
-        <div class="hero-grid">
-          <div>
-            <p class="lead">Academia en Córdoba · Salsa · Bachata · Social dance</p>
-            <h1>Movimiento latino que enciende tus noches.</h1>
-            <p class="lead">
-              Clases para adultos jóvenes (20-40) que quieren aprender, conectar y sentirse libres bailando. Ritmos latinos, entrenamientos accesibles y salidas sociales todas las semanas.
-            </p>
-            <div class="cta-group">
-              <a class="btn btn-primary" href="https://wa.me/+5493515111242" target="_blank" rel="noreferrer">Escribinos por WhatsApp</a>
-              <a class="btn btn-outline" href="#contacto">Reservá tu clase de prueba</a>
-            </div>
-          </div>
-          <div class="hero-card">
-            <h3>Horarios destacados</h3>
-            <ul>
-              <li><strong>Lunes &amp; Miércoles 20:00</strong> · Salsa principiantes</li>
-              <li><strong>Martes 21:00</strong> · Bachata sensual</li>
-              <li><strong>Jueves 19:30</strong> · Ritmos mixtos social</li>
-              <li><strong>Viernes 22:00</strong> · Practica social + after</li>
-            </ul>
-          </div>
-        </div>
+<body>
+  <header class="hero" id="inicio">
+    <div class="wrapper">
+      <div class="top-nav">
+        <div class="logo">Timbaleros</div>
+        <nav class="nav-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#clases">Clases</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
       </div>
-    </header>
-
-    <main>
-      <section id="sobre">
-        <div class="wrapper">
-          <h2>Sobre Timbaleros</h2>
-          <p>
-            Somos una academia independiente fundada en Córdoba, Argentina. Nuestro foco está en la energía latina: salsa, bachata, mambo y fusiones urbanas. Diseñamos clases reducidas para que cada persona reciba feedback personalizado y pueda sentirse cómoda desde el primer compás. Combinamos entrenamiento técnico, musicalidad y salidas sociales para que aprendas y te diviertas.
+      <div class="hero-grid">
+        <div>
+          <p class="lead">Academia en Córdoba · Salsa · Bachata · Social dance</p>
+          <h1>Movimiento latino que enciende tus noches.</h1>
+          <p class="lead">
+            Clases para adultos jóvenes (20-40) que quieren aprender, conectar y sentirse libres bailando. Ritmos
+            latinos, entrenamientos accesibles y salidas sociales todas las semanas.
           </p>
-        </div>
-      </section>
-
-      <section id="clases">
-        <div class="wrapper">
-          <h2>Clases y planes</h2>
-          <p class="lead">Elegí el estilo que más te mueva. Todos los packs incluyen acceso a practicas sociales y playlist curada.</p>
-          <div class="grid cards-3">
-            <article class="card">
-              <h3>Starter Flow</h3>
-              <p>Nivel principiante · 2 clases por semana</p>
-              <ul>
-                <li>Salsa línea on1</li>
-                <li>Técnica básica y musicalidad</li>
-                <li>Acceso a after social</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3>Latin Groove</h3>
-              <p>Nivel intermedio · 3 clases por semana</p>
-              <ul>
-                <li>Bachata moderna + sensual</li>
-                <li>Footwork + parejas</li>
-                <li>Sesión mensual de video review</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3>Performance Crew</h3>
-              <p>Nivel mixto · Intensivo escénico</p>
-              <ul>
-                <li>Coreos para shows y festivales</li>
-                <li>Entrenamiento funcional</li>
-                <li>Mentoría con profes invitados</li>
-              </ul>
-            </article>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="https://wa.me/+5493515111242" target="_blank" rel="noreferrer">Escribinos
+              por WhatsApp</a>
+            <a class="btn btn-outline" href="#contacto">Reservá tu clase de prueba</a>
           </div>
         </div>
-      </section>
-
-      <section id="beneficios">
-        <div class="wrapper">
-          <h2>Beneficios de sumarte</h2>
-          <div class="benefits-list">
-            <div class="benefit-item">
-              <span>01</span>
-              <p>Clases reducidas para avanzar rápido sin perder la onda social.</p>
-            </div>
-            <div class="benefit-item">
-              <span>02</span>
-              <p>Comunidad activa con salidas a bares y festivales latinos.</p>
-            </div>
-            <div class="benefit-item">
-              <span>03</span>
-              <p>Profes formados en ritmos latinos y pedagogía para adultos.</p>
-            </div>
-            <div class="benefit-item">
-              <span>04</span>
-              <p>Playlist, retos y contenido online para practicar desde casa.</p>
-            </div>
-          </div>
+        <div class="hero-card">
+          <h3>Horarios destacados</h3>
+          <ul>
+            <li><strong>Lunes &amp; Miércoles 20:00</strong> · Salsa principiantes</li>
+            <li><strong>Martes 21:00</strong> · Bachata sensual</li>
+            <li><strong>Jueves 19:30</strong> · Ritmos mixtos social</li>
+            <li><strong>Viernes 22:00</strong> · Practica social + after</li>
+          </ul>
         </div>
-      </section>
-
-      <section id="testimonios">
-        <div class="wrapper">
-          <h2>Lo que dicen nuestros alumnos</h2>
-          <div class="grid cards-3">
-            <article class="card">
-              <p>“Llegué sin saber nada y en pocas semanas ya me animé a bailar en las salidas. El equipo te guía con paciencia y mucha buena vibra.”</p>
-              <strong>Lucía · 28 años</strong>
-            </article>
-            <article class="card">
-              <p>“Las clases combinan técnica con diversión. Las prácticas sociales de los viernes son el highlight de mi semana.”</p>
-              <strong>Julián · 34 años</strong>
-            </article>
-            <article class="card">
-              <p>“Elegí el plan Performance y es increíble ver cómo mejoré en seguridad y presencia escénica.”</p>
-              <strong>Agos · 25 años</strong>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq">
-        <div class="wrapper">
-          <h2>Preguntas frecuentes</h2>
-          <div class="faq-list">
-            <details>
-              <summary>¿Necesito experiencia previa?</summary>
-              <p>No. Tenemos grupos para principiantes absolutos y nos enfocamos en que disfrutes desde la primera clase.</p>
-            </details>
-            <details>
-              <summary>¿Debo asistir con pareja?</summary>
-              <p>No es obligatorio. Rotamos parejas constantemente y también practicamos footwork individual.</p>
-            </details>
-            <details>
-              <summary>¿Cómo reservo una clase de prueba?</summary>
-              <p>Completá el formulario o escribinos al WhatsApp. Coordinamos rápidamente fecha y horario disponible.</p>
-            </details>
-            <details>
-              <summary>¿Tienen planes corporativos o eventos privados?</summary>
-              <p>Sí, creamos experiencias para empresas y grupos. Contanos tu idea y armamos la propuesta.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section id="contacto">
-        <div class="wrapper">
-          <h2>Contacto</h2>
-          <div class="contact-grid">
-            <div>
-              <p>Estamos en Nueva Córdoba, a metros del Buen Pastor. Visitá nuestro estudio o escribinos para coordinar tu clase de prueba.</p>
-              <p><strong>Email:</strong> hola@timbaleros.com</p>
-              <p><strong>WhatsApp:</strong> +54 9 351 511 1242</p>
-              <div class="cta-group" style="margin-top: 1.5rem">
-                <a class="btn btn-primary" href="https://wa.me/+5493515111242" target="_blank" rel="noreferrer">Escribinos por WhatsApp</a>
-                <a class="btn btn-outline" href="mailto:hola@timbaleros.com">Enviar email</a>
-              </div>
-              <div class="social-links" style="margin-top: 1.5rem">
-                <a href="https://www.instagram.com/timbaleros" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
-                <a href="https://www.facebook.com/timbaleros" target="_blank" rel="noreferrer" aria-label="Facebook">FB</a>
-              </div>
-            </div>
-            <div>
-              <form action="#" method="post">
-                <label>
-                  <span>Nombre completo</span>
-                  <input type="text" name="nombre" placeholder="Tu nombre" required />
-                </label>
-                <label>
-                  <span>Email</span>
-                  <input type="email" name="email" placeholder="tu@email.com" required />
-                </label>
-                <label>
-                  <span>Mensaje</span>
-                  <textarea name="mensaje" placeholder="Contanos qué clase te interesa" required></textarea>
-                </label>
-                <button class="btn btn-primary" type="submit">Enviar mensaje</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="wrapper">
-        © <span id="year"></span> Timbaleros · Córdoba, Argentina · Seguinos en
-        <a href="https://www.instagram.com/timbaleros" target="_blank" rel="noreferrer">Instagram</a>
-        y
-        <a href="https://www.facebook.com/timbaleros" target="_blank" rel="noreferrer">Facebook</a>.
       </div>
-    </footer>
+    </div>
+  </header>
 
-    <script>
-      const year = document.getElementById('year');
-      if (year) year.textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <main>
+    <section id="sobre">
+      <div class="wrapper">
+        <h2>Sobre Timbaleros</h2>
+        <p>
+          Somos una academia independiente fundada en Córdoba, Argentina. Nuestro foco está en la energía latina: salsa,
+          bachata, mambo y fusiones urbanas. Diseñamos clases reducidas para que cada persona reciba feedback
+          personalizado y pueda sentirse cómoda desde el primer compás. Combinamos entrenamiento técnico, musicalidad y
+          salidas sociales para que aprendas y te diviertas.
+        </p>
+      </div>
+    </section>
+
+    <section id="clases">
+      <div class="wrapper">
+        <h2>Clases y planes</h2>
+        <p class="lead">Elegí el estilo que más te mueva. Todos los packs incluyen acceso a practicas sociales y
+          playlist curada.</p>
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>Starter Flow</h3>
+            <p>Nivel principiante · 2 clases por semana</p>
+            <ul>
+              <li>Salsa línea on1</li>
+              <li>Técnica básica y musicalidad</li>
+              <li>Acceso a after social</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Latin Groove</h3>
+            <p>Nivel intermedio · 3 clases por semana</p>
+            <ul>
+              <li>Bachata moderna + sensual</li>
+              <li>Footwork + parejas</li>
+              <li>Sesión mensual de video review</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Performance Crew</h3>
+            <p>Nivel mixto · Intensivo escénico</p>
+            <ul>
+              <li>Coreos para shows y festivales</li>
+              <li>Entrenamiento funcional</li>
+              <li>Mentoría con profes invitados</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <div class="wrapper">
+        <h2>Beneficios de sumarte</h2>
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <span>01</span>
+            <p>Clases reducidas para avanzar rápido sin perder la onda social.</p>
+          </div>
+          <div class="benefit-item">
+            <span>02</span>
+            <p>Comunidad activa con salidas a bares y festivales latinos.</p>
+          </div>
+          <div class="benefit-item">
+            <span>03</span>
+            <p>Profes formados en ritmos latinos y pedagogía para adultos.</p>
+          </div>
+          <div class="benefit-item">
+            <span>04</span>
+            <p>Playlist, retos y contenido online para practicar desde casa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios">
+      <div class="wrapper">
+        <h2>Lo que dicen nuestros alumnos</h2>
+        <div class="grid cards-3">
+          <article class="card">
+            <p>“Llegué sin saber nada y en pocas semanas ya me animé a bailar en las salidas. El equipo te guía con
+              paciencia y mucha buena vibra.”</p>
+            <strong>Lucía · 28 años</strong>
+          </article>
+          <article class="card">
+            <p>“Las clases combinan técnica con diversión. Las prácticas sociales de los viernes son el highlight de mi
+              semana.”</p>
+            <strong>Julián · 34 años</strong>
+          </article>
+          <article class="card">
+            <p>“Elegí el plan Performance y es increíble ver cómo mejoré en seguridad y presencia escénica.”</p>
+            <strong>Agos · 25 años</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrapper">
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq-list">
+          <details>
+            <summary>¿Necesito experiencia previa?</summary>
+            <p>No. Tenemos grupos para principiantes absolutos y nos enfocamos en que disfrutes desde la primera clase.
+            </p>
+          </details>
+          <details>
+            <summary>¿Debo asistir con pareja?</summary>
+            <p>No es obligatorio. Rotamos parejas constantemente y también practicamos footwork individual.</p>
+          </details>
+          <details>
+            <summary>¿Cómo reservo una clase de prueba?</summary>
+            <p>Completá el formulario o escribinos al WhatsApp. Coordinamos rápidamente fecha y horario disponible.</p>
+          </details>
+          <details>
+            <summary>¿Tienen planes corporativos o eventos privados?</summary>
+            <p>Sí, creamos experiencias para empresas y grupos. Contanos tu idea y armamos la propuesta.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="wrapper">
+        <h2>Contacto</h2>
+        <div class="contact-grid">
+          <div>
+            <p>Estamos en Nueva Córdoba, a metros del Buen Pastor. Visitá nuestro estudio o escribinos para coordinar tu
+              clase de prueba.</p>
+            <p><strong>Email:</strong> hola@timbaleros.com</p>
+            <p><strong>WhatsApp:</strong> +54 9 351 511 1242</p>
+            <div class="cta-group" style="margin-top: 1.5rem">
+              <a class="btn btn-primary" href="https://wa.me/+5493515111242" target="_blank" rel="noreferrer">Escribinos
+                por WhatsApp</a>
+              <a class="btn btn-outline" href="mailto:hola@timbaleros.com">Enviar email</a>
+            </div>
+            <div class="social-links" style="margin-top: 1.5rem">
+              <a href="https://www.instagram.com/timbaleros" target="_blank" rel="noreferrer"
+                aria-label="Instagram">IG</a>
+              <a href="https://www.facebook.com/timbaleros" target="_blank" rel="noreferrer"
+                aria-label="Facebook">FB</a>
+            </div>
+          </div>
+          <div>
+            <form action="#" method="post">
+              <label>
+                <span>Nombre completo</span>
+                <input type="text" name="nombre" placeholder="Tu nombre" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="tu@email.com" required />
+              </label>
+              <label>
+                <span>Mensaje</span>
+                <textarea name="mensaje" placeholder="Contanos qué clase te interesa" required></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      © <span id="year"></span> Timbaleros · Córdoba, Argentina · Seguinos en
+      <a href="https://www.instagram.com/timbaleros" target="_blank" rel="noreferrer">Instagram</a>
+      y
+      <a href="https://www.facebook.com/timbaleros" target="_blank" rel="noreferrer">Facebook</a>.
+    </div>
+  </footer>
+
+  <script>
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>
