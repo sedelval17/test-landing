@@ -16,13 +16,14 @@
     />
     <style>
       :root {
-        --bg: #070810;
-        --bg-alt: #0d111d;
-        --accent: #fddb5c;
-        --accent-2: #ff5f6d;
-        --text: #f5f6ff;
-        --muted: #b3bad6;
-        --card: rgba(17, 21, 36, 0.75);
+        --bg: #0c0714;
+        --bg-alt: #150a20;
+        --accent: #b974ff;
+        --accent-2: #6f7cff;
+        --accent-soft: rgba(185, 116, 255, 0.15);
+        --text: #f3ecff;
+        --muted: #c0b3d7;
+        --card: rgba(27, 17, 42, 0.85);
       }
 
       * {
@@ -32,7 +33,7 @@
 
       body {
         font-family: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
-        background: radial-gradient(circle at top right, rgba(255, 95, 109, 0.2), transparent 45%), var(--bg);
+        background: radial-gradient(circle at top right, rgba(185, 116, 255, 0.25), transparent 45%), var(--bg);
         color: var(--text);
         line-height: 1.6;
       }
@@ -111,8 +112,8 @@
       }
 
       .method-note {
-        background: rgba(253, 219, 92, 0.12);
-        border: 1px solid rgba(253, 219, 92, 0.3);
+        background: var(--accent-soft);
+        border: 1px solid rgba(185, 116, 255, 0.35);
         border-radius: 14px;
         padding: 0.9rem 1rem;
         color: var(--text);
@@ -140,12 +141,12 @@
 
       .btn-primary {
         background: linear-gradient(140deg, var(--accent), var(--accent-2));
-        color: #1b0d0d;
-        box-shadow: 0 15px 35px rgba(255, 95, 109, 0.35);
+        color: #14051f;
+        box-shadow: 0 15px 35px rgba(111, 124, 255, 0.35);
       }
 
       .btn-secondary {
-        border-color: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.25);
         color: var(--text);
       }
 
@@ -161,11 +162,11 @@
       }
 
       .badge {
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(185, 116, 255, 0.15);
         border-radius: 16px;
         padding: 1rem;
         text-align: center;
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(185, 116, 255, 0.08);
       }
 
       section {
@@ -203,7 +204,7 @@
         border-radius: 20px;
         padding: 1.75rem;
         background: var(--card);
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(185, 116, 255, 0.1);
         backdrop-filter: blur(10px);
       }
 
@@ -256,7 +257,7 @@
         border-radius: 50%;
         align-items: center;
         justify-content: center;
-        background: rgba(253, 219, 92, 0.15);
+        background: var(--accent-soft);
         color: var(--accent);
         font-weight: 600;
         margin-bottom: 0.8rem;
@@ -314,7 +315,7 @@
       .cta-block {
         text-align: center;
         padding: 3rem 2rem;
-        background: linear-gradient(120deg, rgba(255, 95, 109, 0.2), rgba(253, 219, 92, 0.08));
+        background: linear-gradient(120deg, rgba(111, 124, 255, 0.25), rgba(185, 116, 255, 0.1));
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.08);
       }
