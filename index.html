@@ -49,9 +49,9 @@
     }
 
     .wrapper {
-      max-width: 960px;
+      max-width: 1040px;
       width: 100%;
-      padding: 1.5rem 1rem 3rem;
+      padding: 1.75rem 1.25rem 3rem;
     }
 
     .card-main {
@@ -64,6 +64,21 @@
     @media (min-width: 768px) {
       .card-main {
         padding: 2.25rem 2.25rem 3rem;
+      }
+    }
+
+    @media (min-width: 1260px) {
+      .wrapper {
+        max-width: 1280px;
+        padding: 2.75rem 2.5rem 3.75rem;
+      }
+
+      .card-main {
+        padding: 3.25rem 3rem 3.75rem;
+      }
+
+      .hero-image img {
+        max-width: 100%;
       }
     }
 
@@ -249,6 +264,12 @@
       gap: 1.25rem;
     }
 
+    @media (min-width: 840px) {
+      .grid-2 {
+        grid-template-columns: 1.1fr 1fr;
+      }
+    }
+
     ul {
       margin: 0.25rem 0 0.75rem;
       padding-left: 1.1rem;
@@ -293,14 +314,11 @@
       padding: 1.25rem 1.1rem 1.4rem;
       border: 1px solid #3b275c;
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-      overflow-x: auto;
-      /* scroll horizontal en pantallas chicas */
     }
 
     .pricing-table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 520px;
       font-size: 0.88rem;
     }
 
@@ -310,7 +328,7 @@
       color: #d1c4ff;
       font-weight: 600;
       border-bottom: 1px solid #3b275c;
-      white-space: nowrap;
+      white-space: normal;
     }
 
     .pricing-table thead th span {
@@ -323,7 +341,7 @@
       padding: 0.4rem 0.6rem;
       border-bottom: 1px solid #3b275c;
       color: #f9f5ff;
-      white-space: nowrap;
+      white-space: normal;
     }
 
     .pricing-table tbody tr:last-child td {
@@ -606,52 +624,6 @@
             actual de tu coreografía.
           </p>
 
-          <!-- PRICING TABLE – COACHEO ESENCIAL (FORMATO TABLA COMPACTA) -->
-          <section class="section" id="pricing-esencial">
-            <h2 class="section-title">Valores Coacheo Esencial</h2>
-            <p class="section-sub">Corrección técnica basada en análisis de video</p>
-
-            <div class="pricing-table-wrapper">
-              <div class="pricing-table-card">
-                <table class="pricing-table">
-                  <thead>
-                    <tr>
-                      <th>Tipo de coacheo</th>
-                      <th>Sesión individual</th>
-                      <th>Pack 4 sesiones<br /><span>(solo solista)</span></th>
-                      <th>Mes intensivo<br /><span>(solo solista)</span></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Solista</strong></td>
-                      <td>ARS 45.000</td>
-                      <td>ARS 170.000</td>
-                      <td>ARS 220.000</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Pareja</strong></td>
-                      <td>ARS 80.000</td>
-                      <td class="muted">A consultar</td>
-                      <td class="muted">A consultar</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Grupal</strong></td>
-                      <td>ARS 120.000</td>
-                      <td class="muted">A consultar</td>
-                      <td class="muted">A consultar</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <p class="pricing-note">
-                  *Los valores para packs y mes intensivo en pareja o grupo se confirman en el Diagnóstico Inicial,
-                  según la cantidad de bailarines y el nivel técnico.*
-                </p>
-              </div>
-            </div>
-          </section>
-
           <div class="packs-grid">
 
             <!-- COACHEO ESENCIAL -->
@@ -669,6 +641,31 @@
                 <li>Ajustes según reglamento.</li>
                 <li>Presencia escénica y claridad coreográfica.</li>
               </ul>
+              <div class="pricing-table-wrapper" id="pricing-esencial">
+                <div class="pricing-table-card">
+                  <table class="pricing-table">
+                    <tbody>
+                      <tr>
+                        <td><strong>Solista</strong></td>
+                        <td>Desde ARS 45.000</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Pareja</strong></td>
+                        <td>Desde ARS 80.000</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Grupal</strong></td>
+                        <td>Desde ARS 120.000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p class="pricing-note">
+                    *Contamos con paquetes y promociones (packs o mes intensivo) que se confirman en el Diagnóstico
+                    Inicial según la cantidad de bailarines y el nivel técnico.*
+                  </p>
+                </div>
+              </div>
             </div>
 
             <!-- OPTIMIZACIÓN -->
