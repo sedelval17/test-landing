@@ -158,6 +158,13 @@
       width: 100%;
     }
 
+    @media (max-width: 480px) {
+      .hero-actions .btn-primary,
+      .hero-actions .btn-secondary {
+        margin-top: 0.35rem;
+      }
+    }
+
     .btn-primary {
       background: var(--accent);
       color: #140c2b;
@@ -388,6 +395,10 @@
       border-radius: 1rem;
       padding: 1.1rem 1rem 1.25rem;
       border: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      height: 100%;
     }
 
     .pack-tag {
@@ -411,6 +422,13 @@
 
     .pack-card ul {
       font-size: 0.86rem;
+    }
+
+    .pack-btn {
+      width: 100%;
+      justify-content: center;
+      margin-top: auto;
+      margin-bottom: 0.1rem;
     }
 
     .pack-subtitle {
@@ -526,7 +544,8 @@
               allowfullscreen></iframe>
           </div>
           <div class="hero-actions">
-            <a href="#contacto" class="btn-primary">Quiero mi diagnóstico inicial</a>
+            <a href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20mi%20Diagn%C3%B3stico%20Inicial%20para%20Coacheos."
+              class="btn-primary">Quiero mi diagnóstico inicial</a>
             <a href="#packs" class="btn-secondary">Ver niveles y opciones</a>
           </div>
         </section>
@@ -666,6 +685,9 @@
                   </p>
                 </div>
               </div>
+              <a class="btn-primary pack-btn"
+                href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Coacheo%20Esencial%20%28Nivel%201%29.">Consultar
+                Coacheo Esencial</a>
             </div>
 
             <!-- OPTIMIZACIÓN -->
@@ -692,6 +714,9 @@
               <p class="price-note" style="margin-top:0.7rem;">
                 Duración sugerida: 4 meses mínimos de acompañamiento.
               </p>
+              <a class="btn-primary pack-btn"
+                href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Optimizaci%C3%B3n%20Total%20%28Nivel%202%29.">Quiero
+                Optimización Total</a>
             </div>
 
             <!-- CREACIÓN DESDE CERO -->
@@ -718,6 +743,9 @@
               <p class="price-note" style="margin-top:0.7rem;">
                 Duración sugerida: 6 meses de acompañamiento completo.
               </p>
+              <a class="btn-primary pack-btn"
+                href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Creaci%C3%B3n%20desde%20Cero%20%28Nivel%203%29.">Quiero
+                Crear desde Cero</a>
             </div>
 
           </div>
@@ -789,12 +817,9 @@
           </p>
           <div class="cta-buttons">
             <!-- Cambiá el link por tu WhatsApp real -->
-            <a href="https://wa.me/XXXXXXXXXX" class="btn-primary">
+            <a href="https://wa.me/5493515111242?text=Hola%21%20Me%20gustar%C3%ADa%20coordinar%20un%20Coacheo."
+              class="btn-primary">
               Escribinos por WhatsApp
-            </a>
-            <!-- Cambiá el mail -->
-            <a href="mailto:info@tusitio.com" class="btn-secondary">
-              Enviar un email
             </a>
           </div>
           <p class="small-muted">
