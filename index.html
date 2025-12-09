@@ -307,9 +307,10 @@
       margin-top: 0.75rem;
     }
 
-    /* Pricing table compact */
+    /* Pricing box */
     .pricing-table-wrapper {
       margin-top: 1.25rem;
+      width: 100%;
     }
 
     .pricing-table-card {
@@ -320,45 +321,31 @@
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
     }
 
-    .pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
+    .pricing-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
     }
 
-    .pricing-table thead th {
-      text-align: left;
-      padding: 0.45rem 0.6rem;
-      color: #d1c4ff;
-      font-weight: 600;
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
       border-bottom: 1px solid #3b275c;
-      white-space: normal;
     }
 
-    .pricing-table thead th span {
-      font-size: 0.7rem;
-      font-weight: 400;
-      color: #a89ae4;
-    }
-
-    .pricing-table tbody td {
-      padding: 0.4rem 0.6rem;
-      border-bottom: 1px solid #3b275c;
-      color: #f9f5ff;
-      white-space: normal;
-    }
-
-    .pricing-table tbody tr:last-child td {
+    .pricing-row:last-child {
       border-bottom: none;
     }
 
-    .pricing-table tbody td:first-child {
+    .pricing-label {
       font-weight: 600;
+      color: #f9f5ff;
     }
 
-    .pricing-table .muted {
-      color: #a89ae4;
-      font-size: 0.8rem;
+    .pricing-value {
+      color: #f9f5ff;
     }
 
     .pricing-note {
@@ -417,6 +404,13 @@
       color: var(--text-soft);
     }
 
+    .pack-description {
+      margin-bottom: 0.5rem;
+      min-height: 95px;
+      display: flex;
+      align-items: flex-start;
+    }
+
     .pack-card ul {
       font-size: 0.86rem;
     }
@@ -424,7 +418,7 @@
     .pack-btn {
       width: 100%;
       justify-content: center;
-      margin-top: auto;
+      margin-top: 0.9rem;
       margin-bottom: 0.1rem;
     }
 
@@ -447,6 +441,13 @@
       font-size: 0.82rem;
       color: var(--text-soft);
       margin: 0;
+    }
+
+    .pack-flex-fill {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
     }
 
     .section-footer-title {
@@ -659,7 +660,7 @@
             <div class="pack-card">
               <div class="pack-tag">Nivel 1 · Coacheo Esencial</div>
               <h3>Coacheo Esencial – Corrección</h3>
-              <p>
+              <p class="pack-description">
                 Correcciones técnicas basadas en tu video. Ideal para pulir una coreografía ya armada con ajustes claros
                 y efectivos.
               </p>
@@ -670,29 +671,29 @@
                 <li>Ajustes según reglamento.</li>
                 <li>Presencia escénica y claridad coreográfica.</li>
               </ul>
-              <div class="pricing-table-wrapper" id="pricing-esencial">
-                <div class="pricing-table-card">
-                  <table class="pricing-table">
-                    <tbody>
-                      <tr>
-                        <td><strong>Solista</strong></td>
-                        <td>Desde ARS 45.000</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Pareja</strong></td>
-                        <td>Desde ARS 80.000</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Grupal</strong></td>
-                        <td>Desde ARS 120.000</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div class="pack-flex-fill">
+                <div class="pricing-table-wrapper" id="pricing-esencial">
+                  <div class="pricing-table-card">
+                    <div class="pricing-rows">
+                      <div class="pricing-row">
+                        <span class="pricing-label">Solista</span>
+                        <span class="pricing-value">Desde ARS 45.000</span>
+                      </div>
+                      <div class="pricing-row">
+                        <span class="pricing-label">Pareja</span>
+                        <span class="pricing-value">Desde ARS 80.000</span>
+                      </div>
+                      <div class="pricing-row">
+                        <span class="pricing-label">Grupal</span>
+                        <span class="pricing-value">Desde ARS 120.000</span>
+                      </div>
+                    </div>
 
-                  <p class="pricing-note">
-                    *Contamos con paquetes y promociones (packs o mes intensivo) que se confirman en el Diagnóstico
-                    Inicial según la cantidad de bailarines y el nivel técnico.*
-                  </p>
+                    <p class="pricing-note">
+                      *Contamos con paquetes y promociones (packs o mes intensivo) que se confirman en el Diagnóstico
+                      Inicial según la cantidad de bailarines y el nivel técnico.*
+                    </p>
+                  </div>
                 </div>
               </div>
               <a class="btn-primary pack-btn"
@@ -704,10 +705,11 @@
             <div class="pack-card">
               <div class="pack-tag">Nivel 2 · Optimización</div>
               <h3>Optimización Total</h3>
-              <p>
+              <p class="pack-description">
                 Reorganizamos, potenciamos y llevamos tu coreografía a un nivel
                 realmente competitivo.
               </p>
+              <p class="pack-subtitle">Incluye</p>
               <ul>
                 <li>Reordenamiento coreográfico.</li>
                 <li>Creación de momentos fuertes e impacto.</li>
@@ -715,15 +717,17 @@
                 <li>Correcciones semanales por video.</li>
                 <li>Simulación final estilo competencia.</li>
               </ul>
-              <div class="highlight-box">
-                <strong>Optimización Total:</strong> este tipo de proyecto se
-                cotiza de forma personalizada durante el Diagnóstico Inicial,
-                teniendo en cuenta nivel, objetivo, tipo de montaje (solista,
-                pareja o grupo) y complejidad artística.
+              <div class="pack-flex-fill">
+                <div class="highlight-box">
+                  <strong>Optimización Total:</strong> este tipo de proyecto se
+                  cotiza de forma personalizada durante el Diagnóstico Inicial,
+                  teniendo en cuenta nivel, objetivo, tipo de montaje (solista,
+                  pareja o grupo) y complejidad artística.
+                </div>
+                <p class="price-note">
+                  Duración sugerida: 4 meses mínimos de acompañamiento.
+                </p>
               </div>
-              <p class="price-note" style="margin-top:0.7rem;">
-                Duración sugerida: 4 meses mínimos de acompañamiento.
-              </p>
               <a class="btn-primary pack-btn"
                 href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Optimizaci%C3%B3n%20Total%20%28Nivel%202%29.">Quiero
                 Optimización Total</a>
@@ -733,10 +737,11 @@
             <div class="pack-card">
               <div class="pack-tag">Nivel 3 · Servicio Premium</div>
               <h3>Creación desde Cero</h3>
-              <p>
+              <p class="pack-description">
                 Proyecto artístico completo: música, concepto, coreografía,
                 puesta y performance final, diseñado especialmente para vos.
               </p>
+              <p class="pack-subtitle">Incluye</p>
               <ul>
                 <li>Selección y edición musical profesional.</li>
                 <li>Concepto, storytelling y energía escénica.</li>
@@ -744,15 +749,17 @@
                 <li>Correcciones y seguimiento semanal por video.</li>
                 <li>Simulación final completa.</li>
               </ul>
-              <div class="highlight-box">
-                <strong>Servicio Premium:</strong> este tipo de proyecto se
-                cotiza de forma personalizada durante el Diagnóstico Inicial,
-                teniendo en cuenta nivel, objetivo, tipo de montaje (solista,
-                pareja o grupo) y complejidad artística.
+              <div class="pack-flex-fill">
+                <div class="highlight-box">
+                  <strong>Servicio Premium:</strong> este tipo de proyecto se
+                  cotiza de forma personalizada durante el Diagnóstico Inicial,
+                  teniendo en cuenta nivel, objetivo, tipo de montaje (solista,
+                  pareja o grupo) y complejidad artística.
+                </div>
+                <p class="price-note">
+                  Duración sugerida: 6 meses de acompañamiento completo.
+                </p>
               </div>
-              <p class="price-note" style="margin-top:0.7rem;">
-                Duración sugerida: 6 meses de acompañamiento completo.
-              </p>
               <a class="btn-primary pack-btn"
                 href="https://wa.me/5493515111242?text=Hola%21%20Quiero%20info%20sobre%20Creaci%C3%B3n%20desde%20Cero%20%28Nivel%203%29.">Quiero
                 Crear desde Cero</a>
