@@ -10,6 +10,8 @@
   <!-- Tipografía similar a la de tu diseño -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/svg+xml" href="favicon-light.svg" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/svg+xml" href="favicon-dark.svg" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
@@ -273,6 +275,54 @@
       .grid-2 {
         grid-template-columns: 1.1fr 1fr;
       }
+    }
+
+    .modalidades-box {
+      margin-top: 1.75rem;
+      background: var(--card-soft);
+      border-radius: 1rem;
+      border: 1px solid var(--border-subtle);
+      padding: 1.25rem 1.1rem 1.35rem;
+    }
+
+    .modalidades-box h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.1rem;
+    }
+
+    .modalidades-box p {
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+
+    .modalidades-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 720px) {
+      .modalidades-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+    }
+
+    .modalidad-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 0.95rem 0.9rem 1rem;
+    }
+
+    .modalidad-card h4 {
+      margin: 0 0 0.4rem;
+      font-size: 1rem;
+    }
+
+    .modalidad-card p {
+      margin: 0;
+      color: var(--text-main);
     }
 
     ul {
@@ -588,18 +638,21 @@
                 Cada nueva sesión parte de un nuevo video tuyo, lo que nos permite seguir tu
                 evolución semana a semana.
               </p>
-
-              <h3 style="margin-top: 0.9rem;">Modalidades</h3>
-              <ul>
-                <li>
-                  <strong>Online:</strong> nos enviás tus videos desde cualquier lugar
-                  y recibís devoluciones precisas a distancia.
-                </li>
-                <li>
-                  <strong>Presencial:</strong> revisamos el video juntos y sumamos
-                  ajustes en vivo sobre tu técnica y performance.
-                </li>
-              </ul>
+            </div>
+          </div>
+          <div class="modalidades-box">
+            <div class="pill">Aplica a todos los pasos</div>
+            <h3>Modalidades</h3>
+            <p>Elegí cómo querés trabajar tus coacheos según tu disponibilidad y ubicación.</p>
+            <div class="modalidades-grid">
+              <div class="modalidad-card">
+                <h4>Online</h4>
+                <p>Nos enviás tus videos desde cualquier lugar y recibís devoluciones precisas a distancia.</p>
+              </div>
+              <div class="modalidad-card">
+                <h4>Presencial</h4>
+                <p>Revisamos el video juntos y sumamos ajustes en vivo sobre tu técnica y performance.</p>
+              </div>
             </div>
           </div>
         </section>
